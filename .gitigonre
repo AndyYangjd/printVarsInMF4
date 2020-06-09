@@ -1,0 +1,5 @@
+__pychche__
+.vscode
+*.settings
+*.pyc
+*.json
