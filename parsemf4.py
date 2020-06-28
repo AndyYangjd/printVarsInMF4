@@ -10,7 +10,6 @@
 
 import sys
 
-import os.path
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog
 try:
@@ -33,7 +32,7 @@ class ParseMF4(QWidget, Ui_Form):
         filePath, _ = QFileDialog.getOpenFileName(self, "select file", "D:/",
                                                   "MF4(*);;Text Files(*.MF4)",
                                                   "Text Files(*.MF4)")
-        fileName = os.path.basename(filePath)
+        fileName = filePath.split("/")[-1]
         self.labbel_fileName.setText(fileName)
         self._parseMF4(filePath)
     

@@ -3,3 +3,8 @@ __pychche__
 *.settings
 *.pyc
 *.json
+*.zip
+*.spec
+build\*
+dist\*
+*.manifest
